@@ -1,7 +1,7 @@
-import 'dart:io' as io;
-import 'package:flutter/material.dart';
 import 'dart:async';
+import 'dart:io' as io;
 
+import 'package:flutter/material.dart';
 import 'package:salesiq_mobilisten/salesiq_mobilisten.dart';
 
 void main() {
@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
       }
       ZohoSalesIQ.init(appKey, accessKey).then((_) {
         // initialization successful
-        ZohoSalesIQ.showLauncher(true);
+        ZohoSalesIQ.show();
       }).catchError((error) {
         // initialization failed
         print(error);
